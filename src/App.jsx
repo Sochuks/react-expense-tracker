@@ -4,16 +4,21 @@ import IncomeExpenses from './Components/IncomeExpenses'
 import TransactionList from './Components/TransactionList'
 import AddTransaction from './Components/AddTransaction'
 
+import GlobalProvider from './Context/GlobalState'
+
 
 function App() {
 
   return (
-    <div className='flex flex-col justify-center items-center h-screen'>
-    <Header/>
-    <IncomeExpenses />
-    <TransactionList/>
-    <AddTransaction/>
-    </div>
+    <GlobalProvider>
+      <div className='flex flex-col justify-center items-center h-screen'>
+          <Header/>
+          <IncomeExpenses />
+          <TransactionList/>
+          <AddTransaction/>
+      </div>      
+    </GlobalProvider>
+
   )
 }
 
