@@ -6,13 +6,16 @@ const TransactionList = () => {
   const { transactions } = useContext(GlobalContext)
 
   return (
-    
     <div>
-      {transactions.map((e)=>(
-        <Transaction key={e.id} getTransaction={e} />
-      ))};
+        <div className='flex flex-col gap-4'>
+            {transactions.map((transaction, key)=>(
+            <Transaction key={transaction.id}  name={transaction.text} amount={transaction.amount}/>
+
+          ))};
         
+        </div>
     </div>
+    
   )
 }
 

@@ -1,12 +1,13 @@
 import React from 'react'
 
-const Transaction = (e) => {
+const Transaction = ({name, amount}) => {
+    const sign = amount < 0 ? '-' : '+'; 
+
   return (
     <div>
-        <div>
-            <h3>History</h3>
-            <ul>
-              {e.text} <li><span>{e.amount}</span> <button>Delete</button></li>
+        <div className=''>
+            <ul className='py-4 px-2 bg-slate-300'>
+              {name} <li><span>{sign}${amount}</span> <button>Delete</button></li>
             </ul>
         </div>
     </div>
