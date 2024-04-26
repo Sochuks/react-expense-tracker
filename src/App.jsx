@@ -10,11 +10,13 @@ function App() {
 
   return (
     <GlobalProvider>
-      <div className='flex flex-col justify-center items-center h-screen'>
+      <div className='h-screen mx-auto max-w-md bg-white'>
+      <div className='flex flex-col items-center'>
           <Header/>
           <IncomeExpenses />
           <TransactionList/>
           <AddTransaction/>
+      </div>
       </div>      
     </GlobalProvider>
 

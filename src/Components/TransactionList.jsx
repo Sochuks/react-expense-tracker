@@ -7,12 +7,11 @@ const TransactionList = () => {
 
   return (
     <div>
-        <div className='flex flex-col gap-4'>
+        <div className='flex flex-col'>
             {transactions.map((transaction, key)=>(
             <Transaction key={transaction.id}  name={transaction.text} amount={transaction.amount}/>
 
           ))};
-        
         </div>
     </div>
     

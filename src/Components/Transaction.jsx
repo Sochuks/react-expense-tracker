@@ -5,9 +5,10 @@ const Transaction = ({name, amount}) => {
 
   return (
     <div>
-        <div className=''>
-            <ul className='py-4 px-2 bg-slate-300'>
-              {name} <li><span>{sign}${amount}</span> <button>Delete</button></li>
+        <div className='my-2'>
+            <ul className={`flex justify-between w-96 py-3 px-2 bg-slate-300 rounded-md
+            ${amount < 0 ? 'border-r-4 border-red-500' : 'border-r-4 border-green-700'}`}>
+              {name} <li><span>{sign}${Math.abs(amount)}</span> <button>Delete</button></li>
             </ul>
         </div>
     </div>
