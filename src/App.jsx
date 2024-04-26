@@ -1,11 +1,13 @@
 import React from 'react'
+import Header from './Components/Header'
+
 
 function App() {
 
   return (
-    <>
-    <h1 className='text-5xl'>WELCOME</h1>
-    </>
+    <div className='flex flex-col justify-center items-center h-screen'>
+    <Header/>
+    </div>
   )
 }
 
