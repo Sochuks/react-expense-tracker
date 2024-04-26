@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './Components/Header'
 import IncomeExpenses from './Components/IncomeExpenses'
 import TransactionList from './Components/TransactionList'
+import AddTransaction from './Components/AddTransaction'
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
     <Header/>
     <IncomeExpenses />
     <TransactionList/>
+    <AddTransaction/>
     </div>
   )
 }
