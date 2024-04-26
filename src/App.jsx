@@ -10,8 +10,8 @@ function App() {
 
   return (
     <GlobalProvider>
-      <div className='h-screen mx-auto max-w-md bg-white'>
-      <div className='flex flex-col items-center'>
+      <div className='mx-auto mt-4 max-w-md bg-white'>
+      <div className='flex flex-col items-center py-4 px-10'>
           <Header/>
           <IncomeExpenses />
           <TransactionList/>
