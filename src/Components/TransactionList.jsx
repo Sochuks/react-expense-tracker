@@ -8,8 +8,8 @@ const TransactionList = () => {
   return (
     <div>
         <div className='flex flex-col'>
-            {transactions.map((transaction, key)=>(
-            <Transaction key={transaction.id}  name={transaction.text} amount={transaction.amount}/>
+            {transactions.map((transaction)=>(
+            <Transaction key={transaction.id} id={transaction.id} name={transaction.text} amount={transaction.amount}/>
 
           ))};
         </div>
