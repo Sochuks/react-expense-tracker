@@ -4,9 +4,9 @@ import { GlobalContext } from '../Context/GlobalState';
 const Transaction = ({name, amount, id}) => {
     const {dispatch} = useContext(GlobalContext);
     // Get sign
-    const sign = amount < 0 ? '-' : '+'; 
-
-  // Actions
+    const sign = amount < 0 ? '-' : '+';
+    
+    // Actions
     const deleteTransaction = (id) =>{
       dispatch({
           type: 'DELETE_TRANSACTION',
