@@ -17,7 +17,7 @@ const Transaction = ({name, amount, id}) => {
   return (
     <div>
         <div className='my-1'>
-            <ul className={`flex justify-between w-96 py-3 px-2 bg-slate-300 rounded-md
+            <ul className={`flex justify-between w-full py-3 px-2 bg-slate-100 rounded
             ${amount < 0 ? 'border-r-4 border-red-500' : 'border-r-4 border-green-700'}`}>
               {name} <li><span>{sign}${Math.abs(amount)}</span> <button 
               className=''
