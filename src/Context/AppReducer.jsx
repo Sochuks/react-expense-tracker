@@ -11,10 +11,6 @@
                 ...state,
                 transactions: [...state.transactions, action.payload] 
             }
-            case 'ADD_BUDGET':
-                return {
-                    ...state,
-                    transactions: [...state.transactions, action.payload] 
-                }
+            
     }
  }

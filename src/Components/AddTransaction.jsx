@@ -15,7 +15,7 @@ const AddTransaction = () => {
         const newTransaction = {
             id: Math.floor(Math.random() * 10000000),
             text: text.trim(),
-            amount: parseInt(amount)
+            amount: parseInt(-amount)
         };
 
         addTransaction(newTransaction);

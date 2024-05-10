@@ -4,12 +4,11 @@ import AppReducer from './AppReducer'
 
 // Initial state
 const initialState = {
-    budget: 200,
     transactions: [
         {id: 1, text: 'Flower', amount: -20},
-        {id: 2, text: 'Salary', amount: 300},
+        {id: 2, text: 'Top-up Balance', amount: +500},
         {id: 3, text: 'Book', amount: -10},
-        {id: 4, text: 'Camera', amount: 150},
+        {id: 4, text: 'Camera', amount: -150},
     ],
 }
 
@@ -28,19 +27,12 @@ export const GlobalProvider = ({children}) =>{
     })
   }
 
-  const addBudget = (budget) =>{
-    dispatch({
-        type: 'ADD_BUDGET',
-        payload: budget
-    })
-}
 
     return (
         <GlobalContext.Provider 
         value={{transactions: state.transactions,
         dispatch,
-        addTransaction,
-        addBudget }}>
+        addTransaction }}>
 
             {children}
 
