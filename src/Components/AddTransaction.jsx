@@ -5,6 +5,7 @@ const AddTransaction = () => {
     // state management
     const [text, setText] = useState('');
     const [amount, setAmount] = useState(0);
+    const [isFormVisible, toggleForm] = useState(false)
 
     const {addTransaction} = useContext(GlobalContext);
 
@@ -25,6 +26,21 @@ const AddTransaction = () => {
     
   return (
     <div>
+        {/* DROP-DOWN EXPENSE FORM */}
+        <div className='w-[350px]'>
+            {/* container */}
+            <div className='w-full pt-2 mb-6'>
+                <button className='flex justify-between items-center px-2 py-2 w-full border border-slate-500 rounded-sm mb-1'
+                onClick={(e) => (toggleForm(!isFormVisible))}>
+                    <p>ADD EXPENSE</p>
+                    <p>+</p>
+                </button>
+                { isFormVisible &&<div className='h-32 border-x border-slate-400 border-b bg-slate-200 rounded-b-md shadow-md'>
+
+                </div>}
+            </div>
+        </div>
+
         <h3>Add new transaction</h3>
         <form onSubmit={formSubmit}>
             <div>
