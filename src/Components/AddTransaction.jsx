@@ -12,7 +12,10 @@ const AddTransaction = () => {
     // formSubmit
     const formSubmit = (e) =>{
         e.preventDefault()
-  
+
+        if (text.trim == "" || amount == 0){
+            alert('No value found')
+        }else{
         const newTransaction = {
             id: Math.floor(Math.random() * 10000000),
             text: text.trim(),
@@ -22,6 +25,8 @@ const AddTransaction = () => {
         addTransaction(newTransaction);
         setText('')
         setAmount(0);
+        toggleForm();
+        }
     }
     
   return (
@@ -38,7 +43,7 @@ const AddTransaction = () => {
                 { isFormVisible &&<div className='h-full py-4 px-4 border-x border-slate-400 border-b bg-slate-200 rounded-b-md shadow-md'>
 
                             <form onSubmit={formSubmit}>
-                                <div>
+                                <div className='space-y-2'>
                                     {/* Text */}
                                     <label htmlFor='text' className="block text-sm font-medium leading-5  text-gray-700">Name</label>
                                         <div className="mt-1 mb-6 relative rounded-md shadow-sm">
@@ -78,7 +83,7 @@ const AddTransaction = () => {
                                             </div>
 
                                             {/* Submit Button */}
-                                            <button>Add Transactions</button>
+                                            <button className='py-2 px-2 w-full bg-green-600 mt-2 rounded-md text-white'>Add</button>
                                 </div>
                             </form>
 
