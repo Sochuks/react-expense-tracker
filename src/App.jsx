@@ -10,7 +10,7 @@ function App() {
 
   return (
     <GlobalProvider>
-      <div className='mx-auto mt-4 max-w-md bg-white'>
+      <div className='mx-auto mt-16 max-w-md rounded-sm bg-white shadow-md shadow-slate-950/10'>
       <div className='flex flex-col items-center py-4 px-10'>
           <Header/>
           < Overview/>

@@ -22,6 +22,10 @@ export default {
         whiteColor: 'rgb(2555, 255, 255)',
         darkColor: '#333',
       },
+      // Bakground Images
+      backgroundImage: {
+        'calcBackground': "url('./assets/calculator-bg.jpg')"
+      }
     },
   },
   plugins: [],
