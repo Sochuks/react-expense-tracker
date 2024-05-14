@@ -28,7 +28,6 @@ const Overview = () => {
         };
 
         addTransaction(newTransaction);
-        setAmnt('')
         toggleForm();
     }
 
